@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* ========================================
@@ -114,7 +115,7 @@ img {
     color: var(--forest);
 }
 
-.nav a.active:after {
+.nav a.active::after {
     content: '';
     display: block;
     height: 2px;
@@ -325,7 +326,7 @@ h2 em {
         center / cover;
 }
 
-.hero-visual:after {
+.hero-visual::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -553,7 +554,7 @@ h2 em {
     overflow: hidden;
 }
 
-.category-image:after {
+.category-image::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -656,8 +657,8 @@ h2 em {
     );
 }
 
-.feature-art:before,
-.feature-art:after {
+.feature-art::before,
+.feature-art::after {
     content: '';
     position: absolute;
     border: 1px solid rgba(255, 255, 255, 0.45);
@@ -669,7 +670,7 @@ h2 em {
     transform: translate(-50%, -50%);
 }
 
-.feature-art:after {
+.feature-art::after {
     width: 210px;
     height: 210px;
 }
@@ -744,39 +745,55 @@ h2 em {
    13. FOOTER
 ======================================== */
 
-.footer {
+/* Footer utama dan footer halaman Tentang
+   menggunakan gaya visual yang sama. */
+
+.footer,
+.site-footer {
     margin-top: 50px;
-    background: #173f2c;
+    background: var(--forest);
     color: #f8f6e9;
     padding: 42px max(24px, calc((100vw - 1240px) / 2));
+
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 15px 35px;
 }
 
-.footer .brand {
-    color: #fff;
+.footer .brand,
+.site-footer .brand {
+    color: #ffffff;
 }
 
-.footer .brand-mark {
+.footer .brand-mark,
+.site-footer .brand-mark {
     background: #dcecae;
     color: var(--forest);
 }
 
-.footer p {
+.footer p,
+.site-footer p {
+    margin: 0;
     font-size: 12px;
     color: #cbd8c8;
 }
 
 .footer-links {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 18px;
 }
 
 .footer-links a {
     font-size: 11px;
     color: #e3ebdd;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--lime);
 }
 
 .footer > small {
@@ -786,31 +803,16 @@ h2 em {
     color: #c0cebf;
     font-size: 10px;
 }
-/* Footer halaman Tentang */
-.site-footer {
-    margin-top: 50px;
-    background: var(--forest);
-    color: #f8f6e9;
-    padding: 35px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
 
-.site-footer .brand {
-    color: #ffffff;
-}
+/* Jika footer Tentang mempunyai copyright,
+   tampilkan seperti footer utama. */
 
-.site-footer .brand-mark {
-    background: #dcecae;
-    color: var(--forest);
-}
-
-.site-footer p {
-    margin: 0;
-    font-size: 12px;
-    color: #cbd8c8;
+.site-footer > small {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 18px;
+    color: #c0cebf;
+    font-size: 10px;
 }
 
 /* ========================================
@@ -850,8 +852,8 @@ h2 em {
     background: linear-gradient(145deg, #dbe9c6, #a5c17f);
 }
 
-.page-hero-art:before,
-.page-hero-art:after {
+.page-hero-art::before,
+.page-hero-art::after {
     content: '';
     position: absolute;
     border: 1px solid rgba(255, 255, 255, 0.65);
@@ -860,7 +862,7 @@ h2 em {
     border-radius: 50%;
 }
 
-.page-hero-art:after {
+.page-hero-art::after {
     width: 170px;
     height: 170px;
 }
@@ -1103,7 +1105,7 @@ h2 em {
     overflow: hidden;
 }
 
-.article-cover:before {
+.article-cover::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -1117,7 +1119,7 @@ h2 em {
     background: #dce8bd;
 }
 
-.cover-food:before {
+.cover-food::before {
     background-image: url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80');
 }
 
@@ -1125,7 +1127,7 @@ h2 em {
     background: #f4e1b6;
 }
 
-.cover-plastic:before {
+.cover-plastic::before {
     background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80');
 }
 
@@ -1133,7 +1135,7 @@ h2 em {
     background: #d4e5d0;
 }
 
-.cover-community:before {
+.cover-community::before {
     background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80');
 }
 
@@ -1193,7 +1195,8 @@ h2 em {
     font-size: 12px;
 }
 
-/* Grid anggota tim */
+/* Grid anggota kelompok */
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1202,7 +1205,8 @@ h2 em {
     align-items: stretch;
 }
 
-/* Kartu anggota tim */
+/* Kartu anggota kelompok */
+
 .team-card {
     min-width: 0;
     padding: 25px 16px;
@@ -1210,46 +1214,65 @@ h2 em {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     text-align: center;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Lingkaran foto dan avatar huruf */
+/* Avatar selalu berbentuk lingkaran */
+
 .team-card .avatar {
+    position: relative;
     width: 110px;
     height: 110px;
-    flex-shrink: 0;
+    min-width: 110px;
+    min-height: 110px;
+    flex: 0 0 110px;
+
     margin: 0 auto 18px;
+    padding: 0;
 
     border-radius: 50%;
-    border: 4px solid white;
+    overflow: hidden;
+    isolation: isolate;
+
+    border: 4px solid #ffffff;
     box-shadow: 0 0 0 1px var(--line);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    overflow: hidden;
     font-family: Manrope, sans-serif;
     font-size: 36px;
     font-weight: 800;
     color: var(--forest);
 }
 
-/* Foto memenuhi lingkaran avatar */
+/* Foto mengisi lingkaran avatar */
+
 .team-card .avatar img {
+    position: absolute;
+    inset: 0;
+
     display: block;
     width: 100%;
     height: 100%;
+    min-width: 0;
     max-width: none;
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+
     object-fit: cover;
     object-position: center;
+
     border-radius: 50%;
 }
 
 /* Nama anggota */
+
 .team-card h3 {
     margin: 0 0 8px;
     font-family: Manrope, sans-serif;
@@ -1259,6 +1282,7 @@ h2 em {
 }
 
 /* NIM anggota */
+
 .team-card p {
     margin: 0 0 14px;
     color: var(--muted);
@@ -1266,6 +1290,7 @@ h2 em {
 }
 
 /* Tugas anggota */
+
 .team-card > span {
     display: inline-block;
     margin-top: auto;
@@ -1280,6 +1305,7 @@ h2 em {
 }
 
 /* Warna dasar avatar */
+
 .team-card .avatar-a {
     background: #dce8c5;
 }
@@ -1394,15 +1420,15 @@ h2 em {
         height: 190px;
     }
 
-    .footer {
-        padding-left: 25px;
-        padding-right: 25px;
+    .footer,
+    .site-footer {
+        padding: 35px 25px;
     }
 
-   .team-grid {
-       grid-template-columns: 1fr;
-       gap: 16px;
-   }
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
 }
 
 /* ========================================
@@ -1410,18 +1436,12 @@ h2 em {
 ======================================== */
 
 @media (max-width: 680px) {
-.site-header {
-border-radius: 17px;
-padding: 12px 14px;
-flex-wrap: wrap;
-gap: 12px;
-}
-.site-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 22px;
-    gap: 12px;
-}
+    .site-header {
+        border-radius: 17px;
+        padding: 12px 14px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 
     .brand {
         font-size: 12px;
@@ -1446,7 +1466,7 @@ gap: 12px;
         font-size: 10px;
     }
 
-    .nav a.active:after {
+    .nav a.active::after {
         margin-top: 4px;
     }
 
@@ -1547,7 +1567,10 @@ gap: 12px;
         font-size: 24px;
     }
 
-    .footer {
+    /* Footer halaman apa pun */
+
+    .footer,
+    .site-footer {
         grid-template-columns: 1fr;
         gap: 12px;
         margin-top: 30px;
@@ -1558,7 +1581,8 @@ gap: 12px;
         flex-wrap: wrap;
     }
 
-    .footer > small {
+    .footer > small,
+    .site-footer > small {
         grid-column: auto;
     }
 
@@ -1618,19 +1642,24 @@ gap: 12px;
         height: 230px;
     }
 
-    /* Tampilan anggota tim di HP */
+    /* Anggota kelompok di HP */
+
     .team-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
     .team-card {
+        min-width: 0;
         padding: 18px 10px;
     }
 
     .team-card .avatar {
         width: 76px;
         height: 76px;
+        min-width: 76px;
+        min-height: 76px;
+        flex-basis: 76px;
         margin-bottom: 14px;
         font-size: 26px;
     }
@@ -1647,6 +1676,7 @@ gap: 12px;
         font-size: 9px;
         padding: 6px 8px;
     }
+
     .reference-row {
         gap: 12px;
     }
@@ -1670,8 +1700,8 @@ gap: 12px;
     }
 
     *,
-    *:before,
-    *:after {
+    *::before,
+    *::after {
         transition: none !important;
     }
 }
