@@ -423,10 +423,10 @@ img { max-width:100%; }
     background:linear-gradient(0deg,rgba(23,63,44,.1),transparent 70%);
 }
 
-.img-organic { background:var(--tone) url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80') center/cover; }
-.img-recycle { background:var(--tone) url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=700&q=80') center/cover; }
-.img-hazard { background:var(--tone) url('https://images.unsplash.com/photo-1605600659873-d808a13e4d9a?auto=format&fit=crop&w=700&q=80') center/cover; }
-.img-residual { background:var(--tone) url('https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=700&q=80') center/cover; }
+.img-organic { background:var(--tone) url('https://qr.ptsuparmatbk.com/blog/wp-content/uploads/2025/05/sampah-organik.png') center/cover; }
+.img-recycle { background:var(--tone) url('https://www.circularonline.co.uk/wp-content/uploads/2019/09/Screenshot-2019-09-12-at-07.45.34-1.png') center/cover; }
+.img-hazard { background:var(--tone) url('https://2.bp.blogspot.com/-AD8nx1lGb10/W7SFokTxofI/AAAAAAAABnQ/0WbmCQ3f4CEJ8qIO9vdSHryQ2Rm0kis1QCLcBGAs/s1600/pengelolaan%2Blimbah%2BB3.jpg') center/cover; }
+.img-residual { background:var(--tone) url('https://media.istockphoto.com/id/1132033248/id/foto/sampah-tisu-gambar-pilek-pilek-demam-jerami-dll-atau-setelah-make-up.jpg?s=170667a&w=0&k=20&c=FabDx9YqFQ-JrdfQFjIn9Yg8PFrlHk4-Jzkjyu6JUug=') center/cover; }
 
 .category-body {
     padding:19px 19px 21px;
