@@ -1036,10 +1036,6 @@ h2 em {
     color: #cb9435;
 }
 
-.step-bag::before {
-    background-image: url('https://media.istockphoto.com/id/1500839089/id/foto/konsep-reuse-reduce-recycle-tanpa-limbah.jpg?s=170667a&w=0&k=20&c=Pawn5ZCG-1RSs1pcJGTJQ_9IITMqy4WxdiDgwekopv4=');
-}
-
 .step-jar {
     color: #71915b;
 }
