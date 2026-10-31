@@ -1120,7 +1120,7 @@ h2 em {
 }
 
 .cover-food::before {
-    background-image: url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://dlhk.mamujukab.go.id/foto_berita/75food_waste_reduce.jpg');
 }
 
 .cover-plastic {
@@ -1128,7 +1128,7 @@ h2 em {
 }
 
 .cover-plastic::before {
-    background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://cdn.vectorstock.com/i/500p/38/45/plastic-or-textile-bags-plastics-rubbish-vector-24613845.jpg');
 }
 
 .cover-community {
@@ -1136,7 +1136,7 @@ h2 em {
 }
 
 .cover-community::before {
-    background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://thumbs.dreamstime.com/b/hand-putting-single-use-plastic-bottle-recycling-bin-hand-putting-single-use-plastic-bottle-recycling-bin-person-163286509.jpg');
 }
 
 .article-cover > span {
